@@ -15,7 +15,7 @@ menu,nav,section,video,abbr,time,progress {
     outline: 0;
     font: inherit;
     font-size: 100%;
-    font-weight: normal;
+    font-weight: inherit;
     vertical-align: baseline;
     background: transparent no-repeat top left;
 }
@@ -45,6 +45,10 @@ body {
     -webkit-text-size-adjust: none;
 }
 
+strong {
+    font-weight: bold;
+}
+
 .cf:before,
 .cf:after {
     content: "";
@@ -57,6 +61,31 @@ body {
 
 .cf {
     zoom: 1;
+}
+
+a {
+    position: relative;
+    display: inline-block;
+    color: #7258a1;
+}
+
+a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+    border-bottom: 1px solid #7258a1;
+    -webkit-transition: width .2s ease-in-out;
+    transition: width .2s ease-in-out;
+}
+
+a:hover:after {
+    width: 100%;
+    -webkit-transition: width 1s ease-in-out;
+    transition: width 1s ease-in-out;
 }
 
 /* ----------------------------------------------------------
@@ -108,6 +137,34 @@ body {
     fill: #7258a1;
 }
 
+.name {
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+
+.role {
+}
+
+.adr {
+    line-height: 1.1;
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+.siret {
+    font-size: 12px;
+    line-height: 1.1;
+    margin-bottom: 18px;
+}
+
+.contact li {
+    font-size: 16px;
+}
+
+/* ----------------------------------------------------------
+    Main col
+   ------------------------------------------------------- */
+
 .section-title {
     display: inline-block;
     min-width: 300px;
@@ -120,33 +177,63 @@ body {
     border-bottom: 1px solid #7258a1;
 }
 
-a {
-    position: relative;
+.section {
+    margin-bottom: 40px;
 }
 
-a:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    overflow: hidden;
-    border-bottom: 1px solid #7258a1;
-    -webkit-transition: width .2s ease-in-out;
-    transition: width .2s ease-in-out;
+.intro {
+    display: none;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 20px;
 }
 
-a:hover:after {
-    width: 100%;
-    -webkit-transition: width 1s ease-in-out;
-    transition: width 1s ease-in-out;
+.information,
+.dates {
+    float: left;
 }
 
-a {
+.dates {
+    width: 160px;
+    padding: 6px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.information {
+    width: 520px;
+    margin-left: 20px;
+}
+
+.education + .education,
+.experience + .experience {
+    margin-top: 20px;
+}
+
+.skills {
+    margin-bottom: 10px;
+}
+
+.langs li,
+.skills li {
     display: inline-block;
-    color: #7258a1;
+    margin: 0 8px;
 }
+
+.langs .level {
+    color: #888;
+    font-size: 16px;
+}
+
+.interests li {
+    display: inline-block;
+}
+
+/* ----------------------------------------------------------
+
+   ------------------------------------------------------- */
 
 /* ----------------------------------------------------------
    Print
@@ -186,12 +273,13 @@ a {
             <div class="vcard">
                 <div class="name-role">
                     <div class="name n fn"><h1><strong>Rémy Barthez</strong></h1></div>
-                    <div class="role">Web Developer</span>
+                    <div class="role">Web Developer</div>
                 </div>
                 <div class="adr">
                     <span class="locality">Paris</span>,
                     <span class="country">FR</span>
                 </div>
+                <div class="siret">SIRET 803 253 079 00013</div>
                 <ul class="contact">
                     <li><a class="email" href="mailto:remy@thenew.fr">remy@thenew.fr</a></li>
                     <li><span class="tel">+33 (0)6 83 97 59 41</span></li>
@@ -203,20 +291,21 @@ a {
 
         <div class="col col-main">
 
-            <p class="summary">
-            Lipsum
+            <p class="intro summary">
+            Front-en developer & WordPress developer since 2011
             </p>
 
             <div class="section experience-section">
                 <h2 class="section-title">Work experience</h2>
                 <ol class="vcalendar">
-                    <li class="experience vevent vcard">
+                    <li class="experience vevent vcard cf">
                         <div class="dates">
                             <abbr class="dtstart" title="2011-04-01">2011</abbr> -
                             <abbr class="dtend" title="">present</abbr>
                         </div>
                         <div class="information">
                             <div class="title summary">front end & WordPress developer</div>
+                            min-width: 160px;
                             <div class="org summary"><a href="http://www.colorz.fr">Colorz</a>, <a href="http://www.openstreetmap.org/?mlat=48.85081&mlon=2.38643#map=19/48.85081/2.38643">Paris</a></div>
                             <p class="description">
                                 4 months internship (<abbr class="dtstart" title="2011-04-01">2011</abbr> - <abbr class="dtend" title="2011-06-30">2011</abbr>), <br />
@@ -225,7 +314,7 @@ a {
                             </p>
                         </div>
                     </li>
-                    <li class="experience vevent vcard">
+                    <li class="experience vevent vcard cf">
                         <div class="dates">
                             <abbr class="dtstart" title="2009-06-01">2009</abbr> -
                             <abbr class="dtend" title="2009-08-30">2009</abbr>
@@ -244,19 +333,38 @@ a {
             <div class="section skills-section">
                 <h2 class="section-title">Skills</h2>
                 <ul class="skills">
-                    <li><a class="skill skill-em-1" rel="tag" href="http://en.wikipedia.org/wiki/PHP">PHP</a></li>
-                    <li><a class="skill" rel="tag" href="http://en.wikipedia.org/wiki/MySQL">MySQL</a></li>
                     <li><a class="skill" rel="tag" href="http://en.wikipedia.org/wiki/HTML">HTML</a></li>
                     <li><a class="skill" rel="tag" href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets">CSS</a></li>
-                    <li><a class="skill" rel="tag" href="http://en.wikipedia.org/wiki/JavaScript">JavaScript</a></li>
-                    <li><a class="skill" rel="tag" href="http://en.wikipedia.org/wiki/Git_(software)">Git</a>
+                    <li><a class="skill skill-em-1" rel="tag" href="http://en.wikipedia.org/wiki/JavaScript">JavaScript</a></li>
+                    <li><a class="skill skill-em-1" rel="tag" href="http://mootools.net">Mootools</a></li>
+                    <li><a class="skill skill-em-1" rel="tag" href="http://jquery.com">jQuery</a></li>
+                    <li><a class="skill skill-em-1" rel="tag" href="http://en.wikipedia.org/wiki/PHP">PHP</a></li>
+                    <li><a class="skill skill-em-1" rel="tag" href="https://wordpress.org">WordPress</a></li>
+                    <li><a class="skill skill-em-1" rel="tag" href="http://en.wikipedia.org/wiki/MySQL">MySQL</a></li>
+                    <li><a class="skill skill-em-1" rel="tag" href="http://en.wikipedia.org/wiki/Git_(software)">Git</a>
+                    <li><a class="skill skill-em-1" rel="tag" href="">Unix shell</a>
+                    <li><a class="skill skill-em-1" rel="tag" href="">Google Apps</a>
+                    <li><a class="skill skill-em-1" rel="tag" href="">UML</a>
+                    <li><a class="skill skill-em-1" rel="tag" href="">Shopify</a>
+                    <li><a class="skill skill-em-1" rel="tag" href="">Symfony</a>
+                    <li><a class="skill skill-em-1" rel="tag" href="">Zend Framework</a>
+                    <li><a class="skill skill-em-1" rel="tag" href="">Ruby on Rails</a>
+                    <li><a class="skill skill-em-1" rel="tag" href="">AS3</a>
+                    <li><a class="skill skill-em-5" rel="tag" href="">Web design</a>
+                    <li><a class="skill skill-em-5" rel="tag" href="">3D modeling</a>
+                    <li><a class="skill skill-em-5" rel="tag" href="">VFX</a>
+                </ul>
+                <ul class="langs">
+                    <li><span class="skill" rel="tag">French <span class="level">mother tongue</span></span></li>
+                    <li><span class="skill" rel="tag">English <span class="level">fluent</span></span></li>
+                    <li><span class="skill" rel="tag">Spanish <span class="level">basic knowledge</span></span></li>
                 </ul>
             </div>
 
             <div class="section education-section">
                 <h2 class="section-title">Education</h2>
                 <ol class="vcalendar">
-                    <li class="education vevent vcard">
+                    <li class="education vevent vcard cf">
                         <div class="dates">
                             <abbr class="dtstart" title="2011-09-01">2011</abbr> -
                             <abbr class="dtend" title="2012-05-10">2012</abbr>
@@ -267,7 +375,7 @@ a {
                             <div class="description">Lipsum</div>
                         </div>
                     </li>
-                    <li class="education vevent vcard">
+                    <li class="education vevent vcard cf">
                         <div class="dates">
                             <abbr class="dtstart" title="2010-09-06">2010</abbr> -
                             <abbr class="dtend" title="2011-04-01">2011</abbr>
@@ -278,7 +386,7 @@ a {
                             <div class="description">Lipsum</div>
                         </div>
                     </li>
-                    <li class="education vevent vcard">
+                    <li class="education vevent vcard cf">
                         <div class="dates">
                             <!--<abbr class="dtstart" title="2011-09-01">2011</abbr> -->
                             <abbr class="dtend" title="2010-06-01">2010</abbr>
@@ -288,7 +396,7 @@ a {
                             <div class="org summary"><a href="http://www.univ-tlse2.fr">University of Toulouse Le Mirail</a>, <a href="http://www.openstreetmap.org/?mlat=43.57794&mlon=1.40152#map=17/43.57794/1.40152">Toulouse</a></div>
                         </div>
                     </li>
-                    <li class="education vevent vcard">
+                    <li class="education vevent vcard cf">
                         <div class="dates">
                             <abbr class="dtstart" title="2011-09-01">2008</abbr>
                             <abbr class="dtend" title="2009-06-01">2009</abbr>
@@ -298,7 +406,7 @@ a {
                             <div class="org summary"><a href="http://www.ecolearies.fr">Aries</a>, <a href="http://www.openstreetmap.org/?mlat=43.61451&mlon=1.41030#map=19/43.61451/1.41030">Toulouse</a></div>
                         </div>
                     </li>
-                    <li class="education vevent vcard">
+                    <li class="education vevent vcard cf">
                         <div class="dates">
                             <!--<abbr class="dtstart" title="2011-09-01">2011</abbr> -->
                             <abbr class="dtend" title="2006-06-01">2006</abbr>
