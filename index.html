@@ -163,37 +163,6 @@ a:hover {
     fill: #7258a1;
 }
 
-@media (max-width: 1060px) {
-    .col-side {
-        width: 160px;
-    }
-
-    .col-main {
-        /*width: 700px;*/
-    }
-}
-
-@media  (max-width: 768px) {
-    .wrapper {
-        display: block;
-    }
-
-    .col {
-        display: block;
-        width: 100%;
-    }
-
-    .col + .col {
-        margin-top: 40px;
-        padding: 0;
-    }
-
-    .logo {
-        right: 0;
-        left: auto;
-    }
-}
-
 .name {
     font-size: 24px;
     margin-bottom: 6px;
@@ -247,6 +216,11 @@ a:hover {
     font-style: italic;
     color: #555;
     margin-bottom: 20px;
+}
+
+.org,
+.description {
+    font-size: 18px;
 }
 
 .information,
@@ -318,6 +292,46 @@ a:hover {
     color: #888;
 }
 
+@media (max-width: 1060px) {
+    .col-side {
+        width: 160px;
+    }
+
+    .col-main {
+        /*width: 700px;*/
+    }
+}
+
+@media  (max-width: 768px) {
+    .wrapper {
+        display: block;
+    }
+
+    .col {
+        display: block;
+        width: 100%;
+    }
+
+    .col + .col {
+        margin-top: 40px;
+        padding: 0;
+    }
+
+    .logo {
+        right: 0;
+        left: auto;
+    }
+
+    .skills {
+        text-align: left;
+    }
+
+    .langs li {
+        display: block;
+        margin: 4px 0;
+    }
+}
+
 /* ----------------------------------------------------------
    Print
    ------------------------------------------------------- */
@@ -367,6 +381,11 @@ a:hover {
 
     .name {
         font-size: 20px;
+    }
+
+    .org,
+    .description {
+        font-size: 13px;
     }
 
     .skills {
@@ -459,7 +478,7 @@ a:hover {
             </p>
 
             <div class="section experience-section">
-                <h2 class="section-title">Work experience</h2>
+                <h2 class="section-title">Professional experience</h2>
                 <ol class="vcalendar">
                     <li class="experience vevent vcard cf">
                         <div class="dates">
