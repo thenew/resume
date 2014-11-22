@@ -223,6 +223,11 @@ a:hover {
     font-size: 18px;
 }
 
+.description {
+    font-size: 16px;
+    opacity: .8;
+}
+
 .information,
 .dates {
     float: left;
@@ -231,7 +236,7 @@ a:hover {
 .dates {
     font-family: 'kelson', sans-serif;
     width: 160px;
-    padding: 6px 0;
+    padding: 3px 0;
     font-size: 18px;
     font-weight: bold;
 }
@@ -292,17 +297,21 @@ a:hover {
     color: #888;
 }
 
-@media screen and (max-width: 1060px) {
+.others-section .section-title {
+    display: inline-block;
+    min-width: 0;
+    padding-right: 10px;
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+@media (max-width: 1060px) {
     .col-side {
         width: 160px;
     }
-
-    .col-main {
-        /*width: 700px;*/
-    }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .wrapper {
         display: block;
     }
@@ -330,6 +339,16 @@ a:hover {
         display: block;
         margin: 4px 0;
     }
+
+    .section-title {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 360px) {
+    .others-section .section-title {
+        display: block;
+    }
 }
 
 /* ----------------------------------------------------------
@@ -344,6 +363,10 @@ a:hover {
     body,
     a {
         color: #000;
+    }
+
+    .hidden-print {
+        display: none;
     }
 
     .wrapper {
@@ -391,13 +414,21 @@ a:hover {
         top: 50px;
     }
 
+    .contact li {
+        font-size: 14px;
+    }
+
     .name {
         font-size: 20px;
     }
 
-    .org,
-    .description {
+    .org {
         font-size: 13px;
+    }
+
+    .description {
+        font-size: 12px;
+        color: #111;
     }
 
     .skills {
@@ -625,6 +656,12 @@ a:hover {
                     <li><a class="interest" rel="tag" href="http://www.catsuka.com/">animation</a></li>,
                     <li><span class="interest" rel="tag">Football</span></li>
                 </ul>
+            </div>
+
+            <div class="section others-section hidden-print">
+                <h2 class="section-title">Other versions: </h2>
+                <a class="" href="pdf/remy_barthez_resume.pdf" download>pdf</a>,
+                <a class="" href="pdf/remy_barthez_cv.pdf" download>français (vieux)</a>
             </div>
 
         </div>
