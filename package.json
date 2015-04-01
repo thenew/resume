@@ -1,7 +1,11 @@
 {
-    "dependencies": {
-        "javascript-brunch": ">= 1.0 < 1.8",
-        "css-brunch": ">= 1.0 < 1.8",
+    "name": "resume",
+    "version": "0.1.0",
+    "private": true,
+    "devDependencies": {
+        "brunch": "^1.7.20",
+        "javascript-brunch": "^1.7.1",
+        "stylus-brunch": "  1.8.1",
         "uglify-js-brunch": ">= 1.0 < 1.8",
         "clean-css-brunch": ">= 1.0 < 1.8"
     }
