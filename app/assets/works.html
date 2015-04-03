@@ -1,412 +1,17 @@
 <!doctype html>
 <html lang="en-US" class="no-js">
 <head>
+    <meta name="robots" content="noindex">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Rémy Barthez resume</title>
+    <title>thenew works</title>
     <link rel="stylesheet" href="app.css">
-    <style type="text/css">
-
-a {
-    position: relative;
-    display: inline-block;
-    color: #554277;
-    -webkit-transition: color .2s ease-in-out;
-    transition: color .2s ease-in-out;
-}
-
-a:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    overflow: hidden;
-    border-bottom: 1px solid #7258a1;
-    -webkit-transition: width .2s ease-in-out;
-    transition: width .2s ease-in-out;
-}
-
-a:hover:after {
-    width: 100%;
-    -webkit-transition: width 1s ease-in-out;
-    transition: width 1s ease-in-out;
-}
-
-a:hover {
-    color: #7258a1;
-}
-
-/* ----------------------------------------------------------
-   Style
-   ------------------------------------------------------- */
-
-.wrapper {
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 1040px;
-    margin: 0 auto;
-    padding: 20px;
-    font-size: 20px;
-    display: table;
-    vertical-align: top;
-    table-layout: fixed;
-}
-
-.col {
-    display: table-cell;
-}
-
-.col + .col {
-    padding-left: 40px;
-}
-
-.col-side {
-    position: relative;
-    width: 260px;
-}
-
-.col-main {
-    width: 700px;
-    width: auto;
-}
-
-/* ----------------------------------------------------------
-   Side
-   ------------------------------------------------------- */
-
-.logo {
-    position: absolute;
-    top: 0;
-    left: -120px;
-    display: block;
-    width: 100px;
-    height: 100px;
-}
-
-.logo .t,
-.logo .n,
-.logo .circle {
-    fill: #7258a1;
-}
-
-.name {
-    font-size: 24px;
-    margin-bottom: 6px;
-}
-
-.role {
-}
-
-.adr {
-    line-height: 1.1;
-    font-size: 16px;
-    margin-bottom: 18px;
-}
-
-.siret {
-    font-size: 12px;
-    line-height: 1.1;
-    margin-bottom: 18px;
-}
-
-.contact li {
-    font-size: 16px;
-}
-
-/* ----------------------------------------------------------
-    Main col
-   ------------------------------------------------------- */
-
-.section-title {
-    font-family: 'kelson', sans-serif;
-    font-weight: 100;
-    display: inline-block;
-    min-width: 300px;
-    padding-bottom: 4px;
-    font-size: 24px;
-    /*font-style: italic;*/
-    margin-bottom: 25px;
-    line-height: 1.2;
-    color: #888;
-    border-bottom: 1px solid #7258a1;
-}
-
-.section {
-    margin-bottom: 60px;
-}
-
-.intro {
-    display: none;
-    font-family: Georgia, serif;
-    font-size: 18px;
-    font-style: italic;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-.org,
-.description {
-    font-size: 18px;
-}
-
-.description {
-    font-size: 16px;
-    opacity: .8;
-}
-
-.information,
-.dates {
-    float: left;
-}
-
-.dates {
-    font-family: 'kelson', sans-serif;
-    width: 160px;
-    padding: 3px 0;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.information {
-    max-width: 520px;
-    margin-left: 20px;
-}
-
-.education + .education,
-.experience + .experience {
-    margin-top: 20px;
-}
-
-.skills {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.langs li,
-.skills li {
-    display: inline-block;
-    margin: 0 8px;
-}
-
-.skills .level,
-.langs .level {
-    color: #888;
-    font-size: 16px;
-}
-
-.skill-em-1 {
-    font-size: 22px;
-}
-
-.skill-em-2 {
-    font-size: 20px;
-}
-
-.skill-em-3 {
-    font-size: 18px;
-}
-
-.skill-em-4 {
-    font-size: 14px;
-}
-
-.skill-em-5 {
-    font-size: 12px;
-}
-
-.interests li {
-    display: inline-block;
-}
-
-.education .description {
-    font-size: 18px;
-    color: #888;
-}
-
-.others-section .section-title {
-    display: inline-block;
-    min-width: 0;
-    padding-right: 10px;
-    border-bottom: none;
-    margin-bottom: 0;
-}
-
-@media (max-width: 1060px) {
-    .col-side {
-        width: 160px;
-    }
-}
-
-@media (max-width: 768px) {
-    .wrapper {
-        display: block;
-    }
-
-    .col {
-        display: block;
-        width: 100%;
-    }
-
-    .col + .col {
-        margin-top: 40px;
-        padding: 0;
-    }
-
-    .logo {
-        right: 0;
-        left: auto;
-    }
-
-    .skills {
-        text-align: left;
-    }
-
-    .langs li {
-        display: block;
-        margin: 4px 0;
-    }
-
-    .section-title {
-        min-width: 100%;
-    }
-}
-
-@media (max-width: 360px) {
-    .others-section .section-title {
-        display: block;
-    }
-}
-
-/* ----------------------------------------------------------
-   Print
-   ------------------------------------------------------- */
-
-@media print {
-    body {
-        background: #fff;
-    }
-
-    body,
-    a {
-        color: #000;
-    }
-
-    .hidden-print {
-        display: none;
-    }
-
-    .wrapper {
-        padding-bottom: 0;
-    }
-
-    .col-side {
-        width: 160px;
-    }
-
-    .section-title,
-    .education .description,
-    .skills .level,
-    .langs .level {
-        color: #333;
-    }
-
-    .section-title {
-        font-size: 18px;
-        margin-bottom: 10px;
-    }
-
-    .section {
-        margin-bottom: 40px;
-    }
-
-    .interests-section {
-        margin-bottom: 0;
-    }
-
-    .wrapper {
-        font-size: 14px;
-    }
-
-    .logo {
-        top: -50px;
-        left: 50%;
-        width: 40px;
-        height: 40px;
-        margin-left: -30px;
-    }
-
-    .col-side {
-        position: relative;
-        top: 50px;
-    }
-
-    .contact li {
-        font-size: 14px;
-    }
-
-    .name {
-        font-size: 20px;
-    }
-
-    .org {
-        font-size: 13px;
-    }
-
-    .description {
-        font-size: 12px;
-        color: #111;
-    }
-
-    .skills {
-        margin-bottom: 20px;
-    }
-
-    .dates {
-        width: 80px;
-        font-size: 12px;
-    }
-
-    .skills .level,
-    .langs .level {
-        font-size: 12px;
-    }
-
-    .education .description {
-        font-size: 12px;
-    }
-
-    .skill-em-1 {
-        font-size: 16px;
-    }
-
-    .skill-em-2 {
-        font-size: 14px;
-    }
-
-    .skill-em-3 {
-        font-size: 13px;
-    }
-
-    .skill-em-4 {
-        font-size: 11px;
-    }
-
-    .skill-em-5 {
-        font-size: 10px;
-    }
-
-}
-
-    </style>
 </head>
 <body>
     <div class="wrapper hresume">
 
-        <aside class="col col-side">
-            <div class="logo" id="logo">
+        <aside class="intro">
+            <div class="logo">
                 <svg viewBox="0 0 100 100">
 <path class="circle" d="M96.068,30.536c-2.518-5.955-6.123-11.301-10.713-15.892c-4.591-4.59-9.938-8.195-15.892-10.713
     C63.297,1.323,56.748,0,50,0S36.703,1.323,30.536,3.931c-5.955,2.518-11.301,6.123-15.892,10.713
@@ -424,12 +29,13 @@ a:hover {
     c0.002-14.252,0.003-15.496,0.003-15.949v-2.28c0-3.625-1.434-7.037-4.035-9.607C75.168,33.297,71.79,31.898,68.227,31.898z"/>
                 </svg>
             </div>
+            <div class="page-title">Works</div>
             <div class="vcard">
                 <div class="name-role">
                     <div class="name n fn"><h1><strong>Rémy Barthez</strong></h1></div>
                     <div class="role">Web Developer</div>
                 </div>
-                <div class="adr">
+                <!-- <div class="adr">
                     <span class="locality">Paris</span>,
                     <span class="country">FR</span>
                 </div>
@@ -439,161 +45,46 @@ a:hover {
                     <li><span class="tel">+33 (0)6 83 97 59 41</span></li>
                     <li><a class="url" href="http://thenew.fr">thenew.fr</a></li>
                     <li><span class="twitter"><a href="http://twitter.com/remybarthez">@remybarthez</a></span></li>
-                </ul>
+                </ul> -->
+                <!-- <p class="intro summary">
+                Front-en developer &amp; WordPress developer since 2011
+                </p> -->
+
             </div>
         </aside>
 
-        <div class="col col-main">
-
-            <p class="intro summary">
-            Front-en developer &amp; WordPress developer since 2011
-            </p>
-
-            <div class="section experience-section">
-                <h2 class="section-title">Professional experience</h2>
-                <ol class="vcalendar">
-                    <li class="experience vevent vcard cf">
-                        <div class="dates">
-                            <abbr class="dtstart" title="2011-04-01">2011</abbr> -
-                            <abbr class="dtend" title="">present</abbr>
-                        </div>
-                        <div class="information">
-                            <div class="title summary">front end &amp; WordPress developer</div>
-                            <div class="org summary"><a href="http://www.colorz.fr">Colorz</a>, <a href="http://www.openstreetmap.org/?mlat=48.85081&amp;mlon=2.38643#map=19/48.85081/2.38643">Paris</a></div>
-                            <p class="description">
-                                full time (<abbr class="dtstart" title="2012-10-08">2012</abbr> - <abbr class="dtend" title="">present</abbr>), <br />
-                                1 year alterning work/study (<abbr class="dtstart" title="2012-01-02">2012</abbr> - <abbr class="dtend" title="2012-10-08">2012</abbr>), <br />
-                                4 months internship (<abbr class="dtstart" title="2011-04-01">April 2011</abbr> - <abbr class="dtend" title="2011-06-30">June 2011</abbr>)
-                            </p>
-                        </div>
-                    </li>
-                    <li class="experience vevent vcard cf">
-                        <div class="dates">
-                            <abbr class="dtstart" title="2009-06-01">2009</abbr> -
-                            <abbr class="dtend" title="2009-08-30">2009</abbr>
-                        </div>
-                        <div class="information">
-                            <div class="title summary">ActionScript 3 developer &amp; designer</div>
-                            <div class="org summary"><a href="http://www.arc-center.com">Arc Center</a>, <a href="http://www.openstreetmap.org/?mlat=43.64827&amp;mlon=1.38002#map=18/43.64827/1.38002">Blagnac</a></div>
-                            <p class="description">
-                                internship
-                            </p>
-                        </div>
-                    </li>
-                </ol>
-            </div>
-
-            <div class="section skills-section">
-                <h2 class="section-title">Skills</h2>
-                <ul class="skills">
-                    <li><a class="skill" rel="tag" href="http://en.wikipedia.org/wiki/HTML">HTML</a></li>
-                    <li><a class="skill" rel="tag" href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets">CSS</a> <span class="level">(
-                        <a rel="tag" href="http://lesscss.org/">Less</a>,
-                        <a rel="tag" href="http://sass-lang.com/">SASS</a>
-                        )</span></li>
-                    <li><a class="skill skill-em-1" rel="tag" href="http://en.wikipedia.org/wiki/JavaScript">JavaScript</a> <span class="level">(
-                    <a class="skill" rel="tag" href="http://mootools.net">Mootools</a>,
-                    <a class="skill" rel="tag" href="http://jquery.com">jQuery</a>
-                    )</span></li>
-                    <li><a class="skill skill-em-1" rel="tag" href="https://wordpress.org">WordPress</a></li>
-                    <li><a class="skill skill-em-1" rel="tag" href="http://en.wikipedia.org/wiki/Git_(software)">Git</a></li>
-                    <li><a class="skill skill-em-2" rel="tag" href="http://en.wikipedia.org/wiki/PHP">PHP</a></li>
-                    <li><a class="skill skill-em-4" rel="tag" href="http://symfony.com/">Symfony</a></li>
-                    <li><a class="skill skill-em-4" rel="tag" href="http://framework.zend.com/">Zend Framework</a></li>
-                    <li><a class="skill skill-em-1" rel="tag" href="http://en.wikipedia.org/wiki/MySQL">MySQL</a></li>
-                    <li><a class="skill skill-em-4" rel="tag" href="http://rubyonrails.org/">Ruby on Rails</a></li>
-                    <li><a class="skill skill-em-3" rel="tag" href="http://fr.wikipedia.org/wiki/ActionScript">AS3</a><li>
-                    <li><a class="skill skill-em-2" rel="tag" href="http://en.wikipedia.org/wiki/Unix_shell">Unix shell</a></li>
-                    <li><a class="skill skill-em-2" rel="tag" href="http://shopify.com">Shopify</a></li>
-                    <li><span class="skill skill-em-2" rel="tag">Google Apps</span></li>
-                    <li><a class="skill skill-em-3" rel="tag" href="http://en.wikipedia.org/wiki/Unified_Modeling_Language">UML</a></li>
-                    <li><span class="skill skill-em-5" rel="tag">Web design</span></li>
-                    <li><span class="skill skill-em-5" rel="tag">3D modeling</span></li>
-                    <li><span class="skill skill-em-5" rel="tag">VFX</span></li>
-                </ul>
-                <ul class="langs">
-                    <li><span class="skill" rel="tag">French <span class="level">mother tongue</span></span></li>
-                    <li><span class="skill" rel="tag">English <span class="level">fluent</span></span></li>
-                    <li><span class="skill" rel="tag">Spanish <span class="level">basic knowledge</span></span></li>
-                </ul>
-            </div>
-
-            <div class="section education-section">
-                <h2 class="section-title">Education</h2>
-                <ol class="vcalendar">
-                    <li class="education vevent vcard cf">
-                        <div class="dates">
-                            <abbr class="dtstart" title="2011-09-01">2011</abbr> -
-                            <abbr class="dtend" title="2012-05-10">2012</abbr>
-                        </div>
-                        <div class="information">
-                            <div class="title summary"><span class="degree">Bachelor</span> <span class="major">web development</span></div>
-                            <div class="org summary"><a href="http://www.cifacom.com/ecole-web/bachelor-developpeur-web">Cifacom</a>, <a href="http://www.openstreetmap.org/?mlat=48.85182&amp;mlon=2.42026#map=19/48.85182/2.42026">Montreuil</a></div>
-                        </div>
-                    </li>
-                    <li class="education vevent vcard cf">
-                        <div class="dates">
-                            <abbr class="dtstart" title="2010-09-06">2010</abbr> -
-                            <abbr class="dtend" title="2011-04-01">2011</abbr>
-                        </div>
-                        <div class="information">
-                            <div class="title summary"><span class="degree">Two-year university degree</span> <span class="major">in technology (DUT SRC)</span></div>
-                            <div class="org summary"><a href="http://www.iut.u-clermont1.fr">University Institute of Technology</a> of <a href="http://www.openstreetmap.org/?mlat=45.03992&amp;mlon=3.88075#map=17/45.03992/3.88075">Le Puy-en-Velay</a></div>
-                            <div class="description">Multidisciplinary formation</div>
-                        </div>
-                    </li>
-                    <li class="education vevent vcard cf">
-                        <div class="dates">
-                            <!--<abbr class="dtstart" title="2011-09-01">2011</abbr> -->
-                            <abbr class="dtend" title="2010-06-01">2010</abbr>
-                        </div>
-                        <div class="information">
-                            <div class="title summary"><span class="degree">Two-year university degree</span> <span class="major">in applied arts</span></div>
-                            <div class="org summary"><a href="http://www.univ-tlse2.fr">University of Toulouse Le Mirail</a>, <a href="http://www.openstreetmap.org/?mlat=43.57794&amp;mlon=1.40152#map=17/43.57794/1.40152">Toulouse</a></div>
-                        </div>
-                    </li>
-                    <li class="education vevent vcard cf">
-                        <div class="dates">
-                            <abbr class="dtstart" title="2011-09-01">2008</abbr> -
-                            <abbr class="dtend" title="2009-06-01">2009</abbr>
-                        </div>
-                        <div class="information">
-                            <div class="title summary"><span class="major">3D multimedia designer</span></div>
-                            <div class="org summary"><a href="http://www.ecolearies.fr">Aries</a>, <a href="http://www.openstreetmap.org/?mlat=43.61451&amp;mlon=1.41030#map=19/43.61451/1.41030">Toulouse</a></div>
-                        </div>
-                    </li>
-                    <li class="education vevent vcard cf">
-                        <div class="dates">
-                            <!--<abbr class="dtstart" title="2011-09-01">2011</abbr> -->
-                            <abbr class="dtend" title="2006-06-01">2006</abbr>
-                        </div>
-                        <div class="information">
-                            <div class="title summary"><span class="degree">High school scientic degree</span></div>
-                            <div class="org summary"><a href="http://raymond-naves.entmip.fr">Raymond Naves high school</a>, <a href="http://www.openstreetmap.org/?mlat=43.63812&amp;mlon=1.46169#map=17/43.63812/1.46169">Toulouse</a></div>
-                        </div>
-                    </li>
-                </ol>
-            </div>
-
-            <div class="section interests-section">
-                <h2 class="section-title">Interests</h2>
-                <ul class="interests">
-                    <li><a class="interest" rel="tag" href="http://dubeauj.eu">video games</a></li>,
-                    <li><span class="interest" rel="tag">Science-fiction</span></li>,
-                    <li><span class="interest" rel="tag">WordPress</span></li>,
-                    <li><a class="interest" rel="tag" href="http://underconsideration.com/brandnew/">visual identity design</a></li>,
-                    <li><a class="interest" rel="tag" href="http://www.catsuka.com/">animation</a></li>,
-                    <li><span class="interest" rel="tag">Football</span></li>
-                </ul>
-            </div>
-
-            <div class="section others-section hidden-print">
-                <h2 class="section-title">Other versions: </h2>
-                <a class="" href="pdf/remy_barthez_resume.pdf" download>pdf</a>,
-                <a class="" href="pdf/remy_barthez_cv.pdf" download>français (vieux)</a>
-            </div>
-
-        </div>
+        <ul class="works-list">
+            <li class="item">
+                <div class="work work-milkdeco">
+                    <div class="media">
+                        <video autoplay loop class="video">
+                            <source src="medias/milkdeco-loading.webm" type="video/webm">
+                        </video>
+                    </div>
+                    <div class="filet"></div>
+                    <div class="infos">
+                        <h2 class="site-title">MilK décoration</h2>
+                        <a href="http://milkdecoration.com" target="_blank" class="site-url">milkdecoration.com</a>
+                        <div class="agency">Réalisé chez Colorz</div>
+                        <div class="site-job">Frontend development (HTML, CSS, JS) &amp; WordPress backend developement</div>
+                    </div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="work work-tp9">
+                    <div class="media">
+                        <img src="medias/tp9.net-1366x768.png" alt="tp9 homepage">
+                    </div>
+                    <div class="filet"></div>
+                    <div class="infos">
+                        <h2 class="site-title">Tony Parker</h2>
+                        <a href="http://www.tp9.net/" target="_blank" class="site-url">tp9.net</a>
+                        <div class="agency">Réalisé chez Colorz</div>
+                        <div class="site-job">Frontend development (HTML, CSS, JS) &amp; WordPress backend developement</div>
+                    </div>
+                </div>
+            </li>
+        </ul>
 
     </div>
 </body>
