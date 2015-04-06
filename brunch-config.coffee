@@ -10,7 +10,10 @@ module.exports = config:
     stylesheets: joinTo:
       'app.css': /^app/
 
-  # plugins:
+  plugins:
+    fbFlo:
+        glob: ['**/*.js', '**/*.css', '**/*.html']
+        resolverReload: /\.html$/
     # cssnext:
     #   sourcemap: true
     #   features:

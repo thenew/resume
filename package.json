@@ -1,12 +1,15 @@
 {
-    "name": "resume",
-    "version": "0.1.0",
-    "private": true,
-    "devDependencies": {
-        "brunch": "^1.7.20",
-        "javascript-brunch": "^1.7.1",
-        "stylus-brunch": "  1.8.1",
-        "uglify-js-brunch": ">= 1.0 < 1.8",
-        "clean-css-brunch": ">= 1.0 < 1.8"
-    }
+  "name": "resume",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "autoprefixer-brunch": "^1.8.4",
+    "brunch": "^1.7.20",
+    "clean-css-brunch": ">= 1.0 < 1.8",
+    "fb-flo-brunch": "^1.7.22",
+    "javascript-brunch": "^1.7.1",
+    "postcss-brunch": "^0.2.1",
+    "stylus-brunch": "  1.8.1",
+    "uglify-js-brunch": ">= 1.0 < 1.8"
+  }
 }
