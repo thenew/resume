@@ -372,11 +372,7 @@ a:hover {
     .wrapper {
         padding-bottom: 0;
     }
-
-    .col-side {
-        width: 160px;
-    }
-
+    
     .section-title,
     .education .description,
     .skills .level,
@@ -411,7 +407,15 @@ a:hover {
 
     .col-side {
         position: relative;
+        display: table-cell;
+        width: 160px;
         padding-top: 50px;
+    }
+
+    .col + .col {
+        display: table-cell;
+        padding-left: 40px;
+        margin-top: 40px;
     }
 
     .contact li {
